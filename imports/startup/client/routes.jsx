@@ -7,6 +7,7 @@ import { Index } from '../../ui/components/index.jsx';
 
 import { One } from '../../ui/pages/one.jsx';
 import { Two } from '../../ui/pages/two.jsx';
+import { NotFound } from '../../ui/pages/not-found.jsx';
 
 Meteor.startup(() => {
   render(
@@ -16,6 +17,7 @@ Meteor.startup(() => {
         <Route path="/one" component={One} />
         <Route path="/two" component={Two} />
       </Route>
+      <Route path="*" component={NotFound} />
     </Router>,
     document.getElementById('react-root')
   );
